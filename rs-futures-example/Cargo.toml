@@ -1,18 +1,10 @@
 [package]
-name = "playground-rust"
+name = "rs-futures-example"
 version = "0.1.0"
 authors = ["guangsheng.li01 <guangsheng.li01@liulishuo.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dev-dependencies]
-criterion = "0.3"
-
-[[bench]]
-name = "my_benchmark"
-harness = false
-
-[[bench]]
-name = "init_hashmap_vec_benchmark"
-harness = false
+[dependencies]
+futures = { version = "0.3.4", features = ["thread-pool"] }
