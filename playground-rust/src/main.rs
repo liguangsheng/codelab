@@ -8,6 +8,5 @@ fn main() {
     v[1].insert("hello1".to_owned(), "world1".to_owned());
     v[0].insert("hello0".to_owned(), "world0".to_owned());
     v[2].insert("hello2".to_owned(), "world2".to_owned());
-
     dbg! {&v};
 }

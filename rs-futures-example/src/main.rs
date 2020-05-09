@@ -1,10 +1,10 @@
 extern crate futures;
 
+use futures::channel::mpsc;
+use futures::executor;
+use futures::executor;
 use futures::executor;
 use futures::executor::ThreadPool;
-use futures::channel::mpsc;
-use futures::StreamExt;
-
 
 fn main() {
     let pool = ThreadPool::new().expect("Failed to build pool");
@@ -33,9 +33,7 @@ fn main() {
         // responsible for transmission
         pool.spawn_ok(fut_tx_result);
 
-        let fut_values = rx
-            .map(|v| v * 2)
-            .collect();
+        let fut_values = rx.map(|v| v * 2).collect();
 
         // Use the executor provided to this async block to wait for the
         // future to complete.
