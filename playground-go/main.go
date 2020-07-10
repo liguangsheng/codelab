@@ -1,11 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"bytes"
+	"container/list"
+	"encoding/binary"
+	"reflect"
+)
 
 func main() {
-	var text string
-	fmt.Scanln(&text)
-	fmt.Println(text)
+
+}
+
+func genStruct(dest interface{}) list.List {
+	_list := list.New()
+	_type := reflect.TypeOf(dest)
+	for i := 0; i < 10; i++ {
+		_list.PushBack(reflect.New(_type).Interface())
+	}
+	return _list
+}
+
+func FromInt(n int) []byte {
+	var buf bytes.Buffer
+	binary.Write(buf, binary.LitterEndian, n)
+	return buf.Bytes()
 }
 
 func check(eee ...interface{}) {
