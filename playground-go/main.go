@@ -1,29 +1,24 @@
 package main
 
 import (
-	"bytes"
-	"container/list"
-	"encoding/binary"
-	"reflect"
+	"container/heap"
+	"fmt"
 )
 
 func main() {
+	nums := Int64Heap{4, 2, 5, 5, 2, 1, 3, 3}
+	heap.Init(&nums)
+	fmt.Println(nums)
 
-}
-
-func genStruct(dest interface{}) list.List {
-	_list := list.New()
-	_type := reflect.TypeOf(dest)
-	for i := 0; i < 10; i++ {
-		_list.PushBack(reflect.New(_type).Interface())
-	}
-	return _list
-}
-
-func FromInt(n int) []byte {
-	var buf bytes.Buffer
-	binary.Write(buf, binary.LitterEndian, n)
-	return buf.Bytes()
+	fmt.Println(heap.Pop(&nums))
+	fmt.Println(heap.Pop(&nums))
+	fmt.Println(heap.Pop(&nums))
+	fmt.Println(heap.Pop(&nums))
+	heap.Push(&nums, int64(1))
+	fmt.Println(heap.Pop(&nums))
+	fmt.Println(heap.Pop(&nums))
+	fmt.Println(heap.Pop(&nums))
+	fmt.Println(heap.Pop(&nums))
 }
 
 func check(eee ...interface{}) {
