@@ -6,4 +6,3 @@ service calculator {
         2:required i32 b;
     )
 }
- 
