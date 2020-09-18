@@ -1,0 +1,13 @@
+github.com/go-ole/go-ole v1.2.4 h1:nNBDSCOigTSiarFpYE9J/KtEA1IOW4CNeqT9TQDqCxI=
+github.com/go-ole/go-ole v1.2.4/go.mod h1:XCwSNxSkXRo4vlyPy93sltvi/qJq0jqQhjqQNIwKuxM=
+github.com/lxn/walk v0.0.0-20200910155722-93a51284d89f h1:JPDYi1G+8zKmkmrIlkoYLHvdIoy8jmjZdBiMQpskxLU=
+github.com/lxn/walk v0.0.0-20200910155722-93a51284d89f/go.mod h1:E23UucZGqpuUANJooIbHWCufXvOcT6E7Stq81gU+CSQ=
+github.com/lxn/win v0.0.0-20191128105842-2da648fda5b4 h1:5BmtGkQbch91lglMHQ9JIDGiYCL3kBRBA0ItZTvOcEI=
+github.com/lxn/win v0.0.0-20191128105842-2da648fda5b4/go.mod h1:ouWl4wViUNh8tPSIwxTVMuS014WakR1hqvBc2I0bMoA=
+github.com/qianniancn/go-dmsoft v1.0.2 h1:lq3d0FgDoFY1nisZP+2Oygom7u5OkimExR2U8iaiFAA=
+github.com/qianniancn/go-dmsoft v1.0.2/go.mod h1:Npf/0MkhbLGTuka6iGDVxPGpSKRe6kOp4cbR1odmN1g=
+golang.org/x/sys v0.0.0-20190904154756-749cb33beabd/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+golang.org/x/sys v0.0.0-20200917073148-efd3b9a0ff20 h1:4X356008q5SA3YXu8PiRap39KFmy4Lf6sGlceJKZQsU=
+golang.org/x/sys v0.0.0-20200917073148-efd3b9a0ff20/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+gopkg.in/Knetic/govaluate.v3 v3.0.0 h1:18mUyIt4ZlRlFZAAfVetz4/rzlJs9yhN+U02F4u1AOc=
+gopkg.in/Knetic/govaluate.v3 v3.0.0/go.mod h1:csKLBORsPbafmSCGTEh3U7Ozmsuq8ZSIlKk1bcqph0E=
