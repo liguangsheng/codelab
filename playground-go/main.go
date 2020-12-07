@@ -3,8 +3,31 @@ package main
 import (
 	"fmt"
 	"github.com/pkg/errors"
-	"time"
+	"regexp"
 )
+
+type Resource struct {
+	UserID int64
+}
+
+func main() {
+	dsn := "aaa=bbb "
+	fmt.Println(replaceDatabase(dsn, "solarland"))
+}
+
+func replaceDatabase(dsn, database string) string {
+	r := regexp.MustCompile("database=\\S*")
+	res := r.FindAllString(dsn, -1)
+	fmt.Println(res)
+	if len(res) > 0 {
+		return r.ReplaceAllString(dsn, "database="+database)
+	}
+	return dsn + " database=" + database
+}
+
+func Append(slice *[]int) {
+	*slice = append(*slice, 3)
+}
 
 type BizError struct {
 	Code    int
@@ -30,13 +53,6 @@ func CauseBizError(err error) *BizError {
 type Person struct {
 	Name string
 	Age  int
-}
-
-func main() {
-	t := time.Now().Truncate(time.Hour * 24).Add(time.Hour * 24)
-	t.Date()
-	fmt.Println(t)
-	fmt.Println(time.Date(2020,9,32,0,0,0,0,t.Location()))
 }
 
 func foo() error {
